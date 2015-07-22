@@ -29,6 +29,8 @@
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
 		DD12EC291B5E177A00B4A233 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC281B5E177A00B4A233 /* Bolts.framework */; };
 		DD12EC2B1B5E178500B4A233 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC2A1B5E178500B4A233 /* Parse.framework */; };
+		DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */; };
+		DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD253CB1B604875007A4BE8 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		DD12EC251B5E16E200B4A233 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DD12EC281B5E177A00B4A233 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DD12EC2A1B5E178500B4A233 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBoxTableViewController.h; path = ../InBoxTableViewController.h; sourceTree = "<group>"; };
+		DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InBoxTableViewController.m; path = ../InBoxTableViewController.m; sourceTree = "<group>"; };
+		DDD253CB1B604875007A4BE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */,
 				DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */,
 				DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */,
 				DD12EC1E1B5E16AD00B4A233 /* CoreLocation.framework in Frameworks */,
@@ -139,6 +145,8 @@
 		DD12EBE81B5E134500B4A233 /* bloQuery */ = {
 			isa = PBXGroup;
 			children = (
+				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
+				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DD12EBED1B5E134500B4A233 /* AppDelegate.h */,
 				DD12EBEE1B5E134500B4A233 /* AppDelegate.m */,
 				DD12EBF01B5E134500B4A233 /* ViewController.h */,
@@ -180,6 +188,7 @@
 		DD12EC151B5E157B00B4A233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDD253CB1B604875007A4BE8 /* CoreData.framework */,
 				DD12EC2A1B5E178500B4A233 /* Parse.framework */,
 				DD12EC281B5E177A00B4A233 /* Bolts.framework */,
 				DD12EC241B5E16E200B4A233 /* Accounts.framework */,
@@ -334,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */,
 				DD12EBF21B5E134500B4A233 /* ViewController.m in Sources */,
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
@@ -470,7 +480,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = bloQuery/Info.plist;
+				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -485,7 +497,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = bloQuery/Info.plist;
+				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
