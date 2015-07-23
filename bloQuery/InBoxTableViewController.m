@@ -20,6 +20,8 @@
     
     [self performSegueWithIdentifier:@"showLogin" sender:self];
     
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    
     }
 
 - (void)didReceiveMemoryWarning {

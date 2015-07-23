@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -21,6 +22,24 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)loginTapped:(id)sender {
+    
+    PFUser *user = [PFUser user];
+    user.username = self.usernameTextField.text;
+    user.password = self.passwordTextField.text;
+    
+    [PFUser logInWithUsernameInBackground:user.username password:user.password
+        block:^(PFUser *user, NSError *error) {
+        if (user) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        // Do stuff after successful login.
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hey!" message:@"Your login was unsuccessful. Check your username/password and try again!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            
+            [alertView show];
+        // The login failed. Check error to see why.
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

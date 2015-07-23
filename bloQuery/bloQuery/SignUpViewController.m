@@ -43,6 +43,11 @@
         } else {
             //NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
         }
+        if ([user.username length] == 0 || [user.password length] == 0 || [user.email length] == 0) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"What?!" message:@"Hey stupid! Make sure you enter a username/password/email!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            
+            [alertView show];
+        }
     }];
 }
 
