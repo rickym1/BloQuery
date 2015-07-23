@@ -27,8 +27,6 @@
 		DD12EC231B5E16AD00B4A233 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */; };
 		DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC241B5E16E200B4A233 /* Accounts.framework */; };
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
-		DD12EC291B5E177A00B4A233 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC281B5E177A00B4A233 /* Bolts.framework */; };
-		DD12EC2B1B5E178500B4A233 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC2A1B5E178500B4A233 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +68,6 @@
 		DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD12EC241B5E16E200B4A233 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DD12EC251B5E16E200B4A233 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		DD12EC281B5E177A00B4A233 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		DD12EC2A1B5E178500B4A233 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +82,8 @@
 				DD12EC201B5E16AD00B4A233 /* libz.dylib in Frameworks */,
 				DD12EC211B5E16AD00B4A233 /* Security.framework in Frameworks */,
 				DD12EC221B5E16AD00B4A233 /* StoreKit.framework in Frameworks */,
-				DD12EC291B5E177A00B4A233 /* Bolts.framework in Frameworks */,
 				DD12EC231B5E16AD00B4A233 /* SystemConfiguration.framework in Frameworks */,
 				DD12EC171B5E15C600B4A233 /* QuartzCore.framework in Frameworks */,
-				DD12EC2B1B5E178500B4A233 /* Parse.framework in Frameworks */,
 				DD12EC121B5E151C00B4A233 /* AudioToolbox.framework in Frameworks */,
 				DD12EC131B5E151C00B4A233 /* CFNetwork.framework in Frameworks */,
 				DD12EC141B5E151C00B4A233 /* CoreGraphics.framework in Frameworks */,
@@ -180,8 +174,6 @@
 		DD12EC151B5E157B00B4A233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD12EC2A1B5E178500B4A233 /* Parse.framework */,
-				DD12EC281B5E177A00B4A233 /* Bolts.framework */,
 				DD12EC241B5E16E200B4A233 /* Accounts.framework */,
 				DD12EC251B5E16E200B4A233 /* Social.framework */,
 				DD12EC181B5E16AD00B4A233 /* CoreLocation.framework */,
