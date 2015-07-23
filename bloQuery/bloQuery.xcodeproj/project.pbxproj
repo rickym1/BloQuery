@@ -27,8 +27,8 @@
 		DD12EC231B5E16AD00B4A233 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */; };
 		DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC241B5E16E200B4A233 /* Accounts.framework */; };
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
-		DD12EC291B5E177A00B4A233 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC281B5E177A00B4A233 /* Bolts.framework */; };
-		DD12EC2B1B5E178500B4A233 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC2A1B5E178500B4A233 /* Parse.framework */; };
+		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
+		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
 		DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */; };
 		DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD253CB1B604875007A4BE8 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -72,8 +72,10 @@
 		DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD12EC241B5E16E200B4A233 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DD12EC251B5E16E200B4A233 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		DD12EC281B5E177A00B4A233 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		DD12EC2A1B5E178500B4A233 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DDA2996F1B6132A300D1B49B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DDA299701B6132A300D1B49B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DDA299721B6132C100D1B49B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		DDA299731B6132C100D1B49B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBoxTableViewController.h; path = ../InBoxTableViewController.h; sourceTree = "<group>"; };
 		DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InBoxTableViewController.m; path = ../InBoxTableViewController.m; sourceTree = "<group>"; };
 		DDD253CB1B604875007A4BE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -92,10 +94,8 @@
 				DD12EC201B5E16AD00B4A233 /* libz.dylib in Frameworks */,
 				DD12EC211B5E16AD00B4A233 /* Security.framework in Frameworks */,
 				DD12EC221B5E16AD00B4A233 /* StoreKit.framework in Frameworks */,
-				DD12EC291B5E177A00B4A233 /* Bolts.framework in Frameworks */,
 				DD12EC231B5E16AD00B4A233 /* SystemConfiguration.framework in Frameworks */,
 				DD12EC171B5E15C600B4A233 /* QuartzCore.framework in Frameworks */,
-				DD12EC2B1B5E178500B4A233 /* Parse.framework in Frameworks */,
 				DD12EC121B5E151C00B4A233 /* AudioToolbox.framework in Frameworks */,
 				DD12EC131B5E151C00B4A233 /* CFNetwork.framework in Frameworks */,
 				DD12EC141B5E151C00B4A233 /* CoreGraphics.framework in Frameworks */,
@@ -155,6 +155,10 @@
 				DD12EBF61B5E134500B4A233 /* Images.xcassets */,
 				DD12EBF81B5E134500B4A233 /* LaunchScreen.xib */,
 				DD12EBE91B5E134500B4A233 /* Supporting Files */,
+				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
+				DDA299701B6132A300D1B49B /* LoginViewController.m */,
+				DDA299721B6132C100D1B49B /* SignUpViewController.h */,
+				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 			);
 			path = bloQuery;
 			sourceTree = "<group>";
@@ -189,8 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				DDD253CB1B604875007A4BE8 /* CoreData.framework */,
-				DD12EC2A1B5E178500B4A233 /* Parse.framework */,
-				DD12EC281B5E177A00B4A233 /* Bolts.framework */,
 				DD12EC241B5E16E200B4A233 /* Accounts.framework */,
 				DD12EC251B5E16E200B4A233 /* Social.framework */,
 				DD12EC181B5E16AD00B4A233 /* CoreLocation.framework */,
@@ -345,8 +347,10 @@
 			files = (
 				DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */,
 				DD12EBF21B5E134500B4A233 /* ViewController.m in Sources */,
+				DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */,
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
+				DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

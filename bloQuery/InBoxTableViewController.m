@@ -18,7 +18,7 @@
     
     [super viewDidLoad];
     
-    [self performSegueWithIdentifier:@"showLoginA" sender:self];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
     
     }
 
