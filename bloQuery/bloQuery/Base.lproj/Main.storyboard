@@ -143,8 +143,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xhh-aG-gJd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="csh-Dj-46b"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="csh-Dj-46b">
+                            <connections>
+                                <action selector="saveTapped:" destination="5wx-ej-KnR" id="H6g-cg-aMo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="queryTextField" destination="9b2-I4-bJs" id="xiE-3T-j5H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTu-Ix-gHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
