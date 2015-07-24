@@ -9,36 +9,18 @@
 #import "QueryTableViewCell.h"
 #import <Parse/Parse.h>
 
-@interface PFTableViewCell ()
+@interface QueryTableViewCell ()
 
-@property (nonatomic, assign) UITableViewCellStyle style;
-@property (nonatomic, strong) UIImageView *customImageView;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *numberOfComments;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @end
 
 @implementation QueryTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.customImageView = [[UIImageView alloc] init];
-        
-        for (UIView *view in self.customImageView) {
-            [self.contentView addSubview:view];
-        }
-    }
-    
-    return self;
-    
-}
 
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

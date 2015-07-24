@@ -11,14 +11,9 @@
 #import <ParseUI/ParseUIConstants.h>
 #import <ParseUI/PFTableViewCell.h>
 
-@class Media;
 
 
 @interface QueryTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIImageView *customImageView;
-
-
-@property (nonatomic, strong) Media *mediaItem;
 
 @end
