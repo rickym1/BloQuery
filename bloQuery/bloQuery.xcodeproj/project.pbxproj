@@ -27,6 +27,13 @@
 		DD12EC231B5E16AD00B4A233 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */; };
 		DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC241B5E16E200B4A233 /* Accounts.framework */; };
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
+<<<<<<< HEAD
+=======
+		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
+		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
+		DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */; };
+		DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD253CB1B604875007A4BE8 /* CoreData.framework */; };
+>>>>>>> login
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,16 @@
 		DD12EC1D1B5E16AD00B4A233 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD12EC241B5E16E200B4A233 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DD12EC251B5E16E200B4A233 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
+=======
+		DDA2996F1B6132A300D1B49B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DDA299701B6132A300D1B49B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DDA299721B6132C100D1B49B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		DDA299731B6132C100D1B49B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBoxTableViewController.h; path = ../InBoxTableViewController.h; sourceTree = "<group>"; };
+		DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InBoxTableViewController.m; path = ../InBoxTableViewController.m; sourceTree = "<group>"; };
+		DDD253CB1B604875007A4BE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+>>>>>>> login
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */,
 				DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */,
 				DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */,
 				DD12EC1E1B5E16AD00B4A233 /* CoreLocation.framework in Frameworks */,
@@ -133,6 +151,12 @@
 		DD12EBE81B5E134500B4A233 /* bloQuery */ = {
 			isa = PBXGroup;
 			children = (
+				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
+				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
+				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
+				DDA299701B6132A300D1B49B /* LoginViewController.m */,
+				DDA299721B6132C100D1B49B /* SignUpViewController.h */,
+				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 				DD12EBED1B5E134500B4A233 /* AppDelegate.h */,
 				DD12EBEE1B5E134500B4A233 /* AppDelegate.m */,
 				DD12EBF01B5E134500B4A233 /* ViewController.h */,
@@ -174,6 +198,10 @@
 		DD12EC151B5E157B00B4A233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				DDD253CB1B604875007A4BE8 /* CoreData.framework */,
+>>>>>>> login
 				DD12EC241B5E16E200B4A233 /* Accounts.framework */,
 				DD12EC251B5E16E200B4A233 /* Social.framework */,
 				DD12EC181B5E16AD00B4A233 /* CoreLocation.framework */,
@@ -326,9 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */,
 				DD12EBF21B5E134500B4A233 /* ViewController.m in Sources */,
+				DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */,
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
+				DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +493,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = bloQuery/Info.plist;
+				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -477,7 +510,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = bloQuery/Info.plist;
+				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
