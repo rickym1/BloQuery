@@ -147,6 +147,10 @@
 			children = (
 				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
+				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
+				DDA299701B6132A300D1B49B /* LoginViewController.m */,
+				DDA299721B6132C100D1B49B /* SignUpViewController.h */,
+				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 				DD12EBED1B5E134500B4A233 /* AppDelegate.h */,
 				DD12EBEE1B5E134500B4A233 /* AppDelegate.m */,
 				DD12EBF01B5E134500B4A233 /* ViewController.h */,
@@ -155,10 +159,6 @@
 				DD12EBF61B5E134500B4A233 /* Images.xcassets */,
 				DD12EBF81B5E134500B4A233 /* LaunchScreen.xib */,
 				DD12EBE91B5E134500B4A233 /* Supporting Files */,
-				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
-				DDA299701B6132A300D1B49B /* LoginViewController.m */,
-				DDA299721B6132C100D1B49B /* SignUpViewController.h */,
-				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 			);
 			path = bloQuery;
 			sourceTree = "<group>";

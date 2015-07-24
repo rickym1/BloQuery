@@ -26,7 +26,13 @@
                             <outlet property="delegate" destination="yyD-WW-B15" id="lbM-iP-BdI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="w0Y-Z4-lgX"/>
+                    <navigationItem key="navigationItem" id="w0Y-Z4-lgX">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="mdQ-QP-tkV">
+                            <connections>
+                                <action selector="logout:" destination="yyD-WW-B15" id="qrA-1h-hsE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ZGw-kL-UVK" kind="show" identifier="showLogin" id="A0N-4N-sZv"/>
                     </connections>
