@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.hidesBackButton = YES;
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     
 }
 - (IBAction)loginTapped:(id)sender {
