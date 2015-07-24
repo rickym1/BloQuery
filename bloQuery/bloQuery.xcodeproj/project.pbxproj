@@ -29,6 +29,8 @@
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
 		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
 		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
+		DDA2997D1B61DB1300D1B49B /* QueryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */; };
+		DDA299801B620DE500D1B49B /* ParseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA2997F1B620DE500D1B49B /* ParseObject.m */; };
 		DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */; };
 		DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD253CB1B604875007A4BE8 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,10 @@
 		DDA299701B6132A300D1B49B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DDA299721B6132C100D1B49B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		DDA299731B6132C100D1B49B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryTableViewCell.h; path = ../QueryTableViewCell.h; sourceTree = "<group>"; };
+		DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryTableViewCell.m; path = ../QueryTableViewCell.m; sourceTree = "<group>"; };
+		DDA2997E1B620DE500D1B49B /* ParseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseObject.h; path = ../ParseObject.h; sourceTree = "<group>"; };
+		DDA2997F1B620DE500D1B49B /* ParseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseObject.m; path = ../ParseObject.m; sourceTree = "<group>"; };
 		DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBoxTableViewController.h; path = ../InBoxTableViewController.h; sourceTree = "<group>"; };
 		DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InBoxTableViewController.m; path = ../InBoxTableViewController.m; sourceTree = "<group>"; };
 		DDD253CB1B604875007A4BE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -147,6 +153,10 @@
 			children = (
 				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
+				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
+				DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */,
+				DDA2997E1B620DE500D1B49B /* ParseObject.h */,
+				DDA2997F1B620DE500D1B49B /* ParseObject.m */,
 				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
 				DDA299701B6132A300D1B49B /* LoginViewController.m */,
 				DDA299721B6132C100D1B49B /* SignUpViewController.h */,
@@ -347,10 +357,12 @@
 			files = (
 				DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */,
 				DD12EBF21B5E134500B4A233 /* ViewController.m in Sources */,
+				DDA299801B620DE500D1B49B /* ParseObject.m in Sources */,
 				DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */,
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
 				DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */,
+				DDA2997D1B61DB1300D1B49B /* QueryTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

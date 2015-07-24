@@ -7,9 +7,13 @@
 //
 
 #import "InBoxTableViewController.h"
+#import "QueryTableViewCell.h"
+
 #import <Parse/Parse.h>
 
 @interface InBoxTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *questionsArray;
 
 @end
 
@@ -23,11 +27,44 @@
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    }
+    [self.tableView registerClass:[QueryTableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+        self.questionsArray = [NSMutableArray array];
+        
+    }
+    return self;
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    // Return the number of rows in the section.
+    return self.questionsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    QueryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    return cell;
+    
 }
 
 
