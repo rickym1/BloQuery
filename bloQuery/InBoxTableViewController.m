@@ -85,6 +85,9 @@
 
     QueryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    PFObject *question = [self.questions objectAtIndex:indexPath.row];
+    cell.textLabel.text = [question objectForKey:@"questionText"];
+    
     return cell;
     
 }
