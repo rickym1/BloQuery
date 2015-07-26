@@ -30,7 +30,8 @@
 - (IBAction)saveTapped:(id)sender {
     
     PFObject *question = [PFObject objectWithClassName:@"Question"];
-    question[@"questionText"] = self.queryTextField.text;
+    [question setObject:self.queryTextField.text forKey:@"questionText"];
+    [question setObject:[PFUser currentUser] forKey:@"author"];
     
     [question saveEventually];
     

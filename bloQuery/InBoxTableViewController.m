@@ -14,6 +14,7 @@
 @interface InBoxTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *questionsArray;
+@property (nonatomic, strong) NSArray *questions;
 
 @end
 
@@ -42,6 +43,27 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Question"];
+    [query whereKey:@"author" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (!error) {
+            
+            self.questions = objects;
+            [self.tableView reloadData];
+            NSLog(@"Retrieved %d questions", self.questions.count);
+            
+        } else {
+            // Maybe add later
+        }
+        
+    }];
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -55,7 +77,7 @@
 {
 
     // Return the number of rows in the section.
-    return self.questionsArray.count;
+    return self.questions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
