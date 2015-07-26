@@ -68,7 +68,6 @@
                                     <outlet property="numberOfComments" destination="eQN-VO-reR" id="XWG-2g-uRV"/>
                                     <outlet property="profileImage" destination="zf9-BO-VtG" id="dDC-dF-CyD"/>
                                     <outlet property="questionLabel" destination="TT3-An-ETR" id="a7Q-GY-PNt"/>
-                                    <segue destination="gk6-Ux-Smy" kind="show" id="0cj-Zl-ORs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,16 +90,17 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ZGw-kL-UVK" kind="show" identifier="showLogin" id="A0N-4N-sZv"/>
+                        <segue destination="gk6-Ux-Smy" kind="show" identifier="showQuestion" id="tQI-eK-aWv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ai8-Fw-zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="-172"/>
+            <point key="canvasLocation" x="595" y="-172"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="ShX-jd-386">
             <objects>
-                <viewController id="gk6-Ux-Smy" sceneMemberID="viewController">
+                <viewController id="gk6-Ux-Smy" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C0t-vm-v54"/>
                         <viewControllerLayoutGuide type="bottom" id="uAc-Ch-1AX"/>
@@ -108,8 +108,25 @@
                     <view key="view" contentMode="scaleToFill" id="9ON-PQ-ENR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3j-Vh-50h">
+                                <rect key="frame" x="26" y="74" width="548" height="516"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uAc-Ch-1AX" firstAttribute="top" secondItem="A3j-Vh-50h" secondAttribute="bottom" constant="10" id="1aR-1w-VX0"/>
+                            <constraint firstItem="A3j-Vh-50h" firstAttribute="leading" secondItem="9ON-PQ-ENR" secondAttribute="leadingMargin" constant="10" id="D7h-Z4-cUP"/>
+                            <constraint firstItem="A3j-Vh-50h" firstAttribute="top" secondItem="C0t-vm-v54" secondAttribute="bottom" constant="10" id="Iv1-Zq-6FH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A3j-Vh-50h" secondAttribute="trailing" constant="10" id="hl7-nS-blj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="A3j-Vh-50h" id="ZOW-wH-MjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3f-HS-h5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

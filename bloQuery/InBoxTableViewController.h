@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface InBoxTableViewController : UITableViewController
 - (IBAction)logout:(id)sender;
+
+@property (nonatomic, strong) NSString *selectedQuestion;
 
 @end

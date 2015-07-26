@@ -8,8 +8,8 @@
 
 #import "InBoxTableViewController.h"
 #import "QueryTableViewCell.h"
+#import "QuestionViewController.h"
 
-#import <Parse/Parse.h>
 
 @interface InBoxTableViewController ()
 
@@ -88,7 +88,25 @@
     PFObject *question = [self.questions objectAtIndex:indexPath.row];
     cell.textLabel.text = [question objectForKey:@"questionText"];
     
+    self.selectedQuestion = cell.textLabel.text;
+    
     return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cell = @"showQuestion";
+    [self performSegueWithIdentifier:cell sender:self];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showQuestion"]) {
+        QuestionViewController *questionViewController = (QuestionViewController *)segue.destinationViewController;
+        questionViewController.query = self.selectedQuestion;
+
+    }
     
 }
 
