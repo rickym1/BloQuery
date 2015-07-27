@@ -28,6 +28,7 @@
 		DD12EC261B5E16E200B4A233 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC241B5E16E200B4A233 /* Accounts.framework */; };
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
 		DD1A3B5F1B6466840085D5A4 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3B5E1B6466840085D5A4 /* QuestionViewController.m */; };
+		DD2799A91B65D1AC00F5891E /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */; };
 		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
 		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
 		DDA2997D1B61DB1300D1B49B /* QueryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */; };
@@ -77,6 +78,8 @@
 		DD12EC251B5E16E200B4A233 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DD1A3B5D1B6466840085D5A4 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		DD1A3B5E1B6466840085D5A4 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerViewController.h; sourceTree = "<group>"; };
+		DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerViewController.m; sourceTree = "<group>"; };
 		DDA2996F1B6132A300D1B49B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DDA299701B6132A300D1B49B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DDA299721B6132C100D1B49B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
 				DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */,
+				DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */,
+				DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */,
 				DD1A3B5D1B6466840085D5A4 /* QuestionViewController.h */,
 				DD1A3B5E1B6466840085D5A4 /* QuestionViewController.m */,
 				DDA299811B6281A500D1B49B /* CreateQuestionViewController.h */,
@@ -168,8 +173,6 @@
 				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 				DD12EBED1B5E134500B4A233 /* AppDelegate.h */,
 				DD12EBEE1B5E134500B4A233 /* AppDelegate.m */,
-				DD12EBF01B5E134500B4A233 /* ViewController.h */,
-				DD12EBF11B5E134500B4A233 /* ViewController.m */,
 				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DD12EBF61B5E134500B4A233 /* Images.xcassets */,
 				DD12EBF81B5E134500B4A233 /* LaunchScreen.xib */,
@@ -181,6 +184,8 @@
 		DD12EBE91B5E134500B4A233 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD12EBF01B5E134500B4A233 /* ViewController.h */,
+				DD12EBF11B5E134500B4A233 /* ViewController.m */,
 				DD12EBEA1B5E134500B4A233 /* Info.plist */,
 				DD12EBEB1B5E134500B4A233 /* main.m */,
 			);
@@ -366,6 +371,7 @@
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
 				DD1A3B5F1B6466840085D5A4 /* QuestionViewController.m in Sources */,
+				DD2799A91B65D1AC00F5891E /* AddAnswerViewController.m in Sources */,
 				DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */,
 				DDA299831B6281A500D1B49B /* CreateQuestionViewController.m in Sources */,
 				DDA2997D1B61DB1300D1B49B /* QueryTableViewCell.m in Sources */,
