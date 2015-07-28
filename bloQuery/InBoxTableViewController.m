@@ -7,9 +7,14 @@
 //
 
 #import "InBoxTableViewController.h"
-#import <Parse/Parse.h>
+#import "QueryTableViewCell.h"
+#import "QuestionViewController.h"
+
 
 @interface InBoxTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *questionsArray;
+@property (nonatomic, strong) NSArray *questions;
 
 @end
 
@@ -23,11 +28,87 @@
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    }
+    [self.tableView registerClass:[QueryTableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+        self.questionsArray = [NSMutableArray array];
+        
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Question"];
+    [query whereKey:@"author" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (!error) {
+            
+            self.questions = objects;
+            [self.tableView reloadData];
+            NSLog(@"Retrieved %d questions", self.questions.count);
+            
+        } else {
+            // Maybe add later
+        }
+        
+    }];
+    
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    // Return the number of rows in the section.
+    return self.questions.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    QueryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    PFObject *question = [self.questions objectAtIndex:indexPath.row];
+    cell.textLabel.text = [question objectForKey:@"questionText"];
+    
+    
+    
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.selectedQuestion = self.questions[indexPath.row];
+    static NSString *cell = @"showQuestion";
+    [self performSegueWithIdentifier:cell sender:self];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showQuestion"]) {
+        QuestionViewController *questionViewController = (QuestionViewController *)segue.destinationViewController;
+        questionViewController.query = self.selectedQuestion;
+
+    }
+    
 }
 
 
