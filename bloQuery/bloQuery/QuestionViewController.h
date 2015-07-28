@@ -11,7 +11,7 @@
 
 @interface QuestionViewController : UIViewController
 
-@property (nonatomic, strong) NSString *query;
+@property (nonatomic, strong) PFObject *query;
 
 
 @end

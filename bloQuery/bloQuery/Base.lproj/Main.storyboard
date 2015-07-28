@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" id="DEb-sN-luJ">
                         <barButtonItem key="rightBarButtonItem" title="Add Answer" id="IEX-rM-Dwq">
                             <connections>
-                                <segue destination="ZlN-XR-hwu" kind="show" id="TKn-pS-3xz"/>
+                                <segue destination="ZlN-XR-hwu" kind="show" identifier="addAnswer" id="TKn-pS-3xz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

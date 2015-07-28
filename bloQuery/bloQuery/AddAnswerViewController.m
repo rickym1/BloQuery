@@ -33,8 +33,13 @@
     PFObject *answer = [PFObject objectWithClassName:@"Answer"];
     [answer setObject:self.answerTextField.text forKey:@"answerText"];
     [answer setObject:[PFUser currentUser] forKey:@"author"];
-            
-    [answer saveEventually];
+    
+    [answer save];
+    
+    PFRelation *relation = [self.query relationForKey:@"answers"];
+    [relation addObject:answer];
+    
+    [self.query saveInBackground];
     
     
     

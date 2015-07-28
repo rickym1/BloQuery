@@ -12,6 +12,6 @@
 @interface InBoxTableViewController : UITableViewController
 - (IBAction)logout:(id)sender;
 
-@property (nonatomic, strong) NSString *selectedQuestion;
+@property (nonatomic, strong) PFObject *selectedQuestion;
 
 @end

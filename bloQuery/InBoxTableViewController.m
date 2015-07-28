@@ -88,14 +88,15 @@
     PFObject *question = [self.questions objectAtIndex:indexPath.row];
     cell.textLabel.text = [question objectForKey:@"questionText"];
     
-    self.selectedQuestion = cell.textLabel.text;
+    
     
     return cell;
     
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    self.selectedQuestion = self.questions[indexPath.row];
     static NSString *cell = @"showQuestion";
     [self performSegueWithIdentifier:cell sender:self];
     
