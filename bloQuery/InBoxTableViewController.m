@@ -47,7 +47,6 @@
     [super viewWillAppear:animated];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Question"];
-    [query whereKey:@"author" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (!error) {
