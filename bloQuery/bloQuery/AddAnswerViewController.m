@@ -41,6 +41,8 @@
     
     [self.query saveInBackground];
     
+    [self.navigationController popViewControllerAnimated:YES];
+    
     
     
 }
