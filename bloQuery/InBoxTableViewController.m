@@ -8,7 +8,7 @@
 
 #import "InBoxTableViewController.h"
 #import "QueryTableViewCell.h"
-#import "QuestionViewController.h"
+#import "QATableViewController.h"
 
 
 @interface InBoxTableViewController ()
@@ -96,15 +96,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     self.selectedQuestion = self.questions[indexPath.row];
-    static NSString *cell = @"showQuestion";
+    static NSString *cell = @"showQA";
     [self performSegueWithIdentifier:cell sender:self];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showQuestion"]) {
-        QuestionViewController *questionViewController = (QuestionViewController *)segue.destinationViewController;
-        questionViewController.query = self.selectedQuestion;
+    if ([segue.identifier isEqualToString:@"showQA"]) {
+        QATableViewController *qATableViewController = (QATableViewController *)segue.destinationViewController;
+        qATableViewController.query = self.selectedQuestion;
 
     }
     
