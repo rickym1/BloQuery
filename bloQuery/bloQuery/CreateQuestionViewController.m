@@ -35,6 +35,8 @@
     
     [question saveEventually];
     
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 
