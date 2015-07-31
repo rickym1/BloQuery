@@ -7,6 +7,7 @@
 //
 
 #import "QATableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface QATableViewCell ()
 
@@ -21,6 +22,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
+}
+
+-(void)setImage:(UIImage *)image {
+    PFUser *user = [[PFUser currentUser];
+    PFQuery *findImage = [PFQuery queryWithClassName:@"User"];
+    [findImage getObjectInBackgroundWithId:user block:^(PFFile *superImage, NSError *error) {
+        if (!error) {
+            self.profileImage = superImage;
+        }
+    }]
+                    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

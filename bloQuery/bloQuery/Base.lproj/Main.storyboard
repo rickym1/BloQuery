@@ -78,9 +78,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="w0Y-Z4-lgX">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="mdQ-QP-tkV">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="oVP-1P-fwB">
                             <connections>
-                                <action selector="logout:" destination="yyD-WW-B15" id="qrA-1h-hsE"/>
+                                <segue destination="scz-DV-8nI" kind="show" identifier="editProfile" id="fbF-u8-NiE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qu1-X6-UAY">
@@ -90,7 +90,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="ZGw-kL-UVK" kind="show" identifier="showLogin" id="A0N-4N-sZv"/>
+                        <segue destination="ZGw-kL-UVK" kind="show" identifier="showLogin" id="SWJ-q6-iqM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ai8-Fw-zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,6 +207,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oy-xP-v1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1301" y="580"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="7cm-p3-dhG">
+            <objects>
+                <viewController id="scz-DV-8nI" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnb-bb-ZpX"/>
+                        <viewControllerLayoutGuide type="bottom" id="SuK-uv-AMo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JbU-GV-rCm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe Yourself" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pt7-GA-2XZ">
+                                <rect key="frame" x="26" y="200" width="548" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dxj-Ou-Xk2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-uE-sPW">
+                                <rect key="frame" x="249" y="322" width="103" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.56360974699999999" blue="0.2351938026" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="F0b-OH-Vum"/>
+                                </constraints>
+                                <state key="normal" title="Get Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getImage:" destination="scz-DV-8nI" eventType="touchUpInside" id="QpL-Tc-5e4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WSM-uE-sPW" firstAttribute="top" secondItem="Pt7-GA-2XZ" secondAttribute="bottom" constant="92" id="2B8-mL-6l4"/>
+                            <constraint firstItem="WSM-uE-sPW" firstAttribute="leading" secondItem="JbU-GV-rCm" secondAttribute="leadingMargin" constant="233" id="3RB-Kk-Huf"/>
+                            <constraint firstItem="Pt7-GA-2XZ" firstAttribute="top" secondItem="gnb-bb-ZpX" secondAttribute="bottom" constant="136" id="Bo8-gW-t78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WSM-uE-sPW" secondAttribute="trailing" constant="232" id="JYd-ot-pVY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pt7-GA-2XZ" secondAttribute="trailing" constant="10" id="QMa-rn-PJ2"/>
+                            <constraint firstItem="Pt7-GA-2XZ" firstAttribute="leading" secondItem="JbU-GV-rCm" secondAttribute="leadingMargin" constant="10" id="VhU-ol-NSX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ep-9r-jQt">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="HQn-0K-Ygl">
+                            <connections>
+                                <action selector="logOut:" destination="scz-DV-8nI" id="RfG-N2-RAz"/>
+                                <segue destination="ZGw-kL-UVK" kind="show" identifier="returnLogin" id="c7S-10-Flc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Hci-qT-ydv">
+                            <connections>
+                                <action selector="saveToProfile:" destination="scz-DV-8nI" id="v6p-6r-4yq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileDescription" destination="Pt7-GA-2XZ" id="0Dn-Jk-5cU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT1-44-EwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="-878"/>
         </scene>
         <!--Create Question View Controller-->
         <scene sceneID="5E1-Ml-LBq">
@@ -473,4 +538,7 @@
             <point key="canvasLocation" x="2039" y="-172"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c7S-10-Flc"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -29,6 +29,8 @@
 		DD12EC271B5E16E200B4A233 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD12EC251B5E16E200B4A233 /* Social.framework */; };
 		DD213FAA1B694F8D0095B175 /* QATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FA91B694F8D0095B175 /* QATableViewController.m */; };
 		DD213FAD1B6968AB0095B175 /* QATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FAC1B6968AB0095B175 /* QATableViewCell.m */; };
+		DD213FB01B6AC1CC0095B175 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */; };
+		DD213FB31B6ADD280095B175 /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = DD213FB21B6ADD280095B175 /* chicken.png */; };
 		DD2799A91B65D1AC00F5891E /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */; };
 		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
 		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
@@ -81,6 +83,9 @@
 		DD213FA91B694F8D0095B175 /* QATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QATableViewController.m; path = ../QATableViewController.m; sourceTree = "<group>"; };
 		DD213FAB1B6968AB0095B175 /* QATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QATableViewCell.h; path = ../QATableViewCell.h; sourceTree = "<group>"; };
 		DD213FAC1B6968AB0095B175 /* QATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QATableViewCell.m; path = ../QATableViewCell.m; sourceTree = "<group>"; };
+		DD213FAE1B6AC1CC0095B175 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		DD213FB21B6ADD280095B175 /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
 		DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerViewController.h; sourceTree = "<group>"; };
 		DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerViewController.m; sourceTree = "<group>"; };
 		DDA2996F1B6132A300D1B49B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -164,6 +169,8 @@
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
 				DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */,
+				DD213FAE1B6AC1CC0095B175 /* ProfileViewController.h */,
+				DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */,
 				DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */,
 				DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */,
 				DD213FA81B694F8D0095B175 /* QATableViewController.h */,
@@ -181,6 +188,7 @@
 				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DD12EBF61B5E134500B4A233 /* Images.xcassets */,
 				DD12EBF81B5E134500B4A233 /* LaunchScreen.xib */,
+				DD213FB11B6ADADC0095B175 /* Images */,
 				DD12EBE91B5E134500B4A233 /* Supporting Files */,
 			);
 			path = bloQuery;
@@ -233,6 +241,14 @@
 				23EAE0675944F369750A8479 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD213FB11B6ADADC0095B175 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DD213FB21B6ADD280095B175 /* chicken.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +336,7 @@
 				DD12EBF51B5E134500B4A233 /* Main.storyboard in Resources */,
 				DD12EBFA1B5E134500B4A233 /* LaunchScreen.xib in Resources */,
 				DD12EBF71B5E134500B4A233 /* Images.xcassets in Resources */,
+				DD213FB31B6ADD280095B175 /* chicken.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +397,7 @@
 				DDA299831B6281A500D1B49B /* CreateQuestionViewController.m in Sources */,
 				DD213FAD1B6968AB0095B175 /* QATableViewCell.m in Sources */,
 				DDA2997D1B61DB1300D1B49B /* QueryTableViewCell.m in Sources */,
+				DD213FB01B6AC1CC0095B175 /* ProfileViewController.m in Sources */,
 				DD213FAA1B694F8D0095B175 /* QATableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
