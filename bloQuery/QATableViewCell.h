@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import <ParseUI/ParseUIConstants.h>
-#import <ParseUI/PFTableViewCell.h>
+#import <Parse/Parse.h>
 
 @interface QATableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLable;
+
+-(void)setUser:(PFUser *)user;
 
 @end

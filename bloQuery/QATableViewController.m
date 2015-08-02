@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[QATableViewCell class] forCellReuseIdentifier:@"Cell"];
+   // [self.tableView registerClass:[QATableViewCell class] forCellReuseIdentifier:@"Cell"];
     
 }
 
@@ -85,10 +85,11 @@
     // Configure the cell...
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = [self.query objectForKey:@"questionText"];
+        cell.infoLable.text = [self.query objectForKey:@"questionText"];
+        [cell setUser:self.query[@"author"]];
     } else {
         PFObject *finalAnswer = [self.theAnswers objectAtIndex:indexPath.row -1];
-        cell.textLabel.text = [finalAnswer objectForKey:@"answerText"];
+        cell.infoLable.text = [finalAnswer objectForKey:@"answerText"];
     }
     
     return cell;

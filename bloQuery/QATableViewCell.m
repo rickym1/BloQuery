@@ -11,7 +11,7 @@
 
 @interface QATableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *infoLable;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
@@ -24,15 +24,16 @@
     // Initialization code
 }
 
--(void)setImage:(UIImage *)image {
-    PFUser *user = [[PFUser currentUser];
-    PFQuery *findImage = [PFQuery queryWithClassName:@"User"];
-    [findImage getObjectInBackgroundWithId:user block:^(PFFile *superImage, NSError *error) {
-        if (!error) {
-            self.profileImage = superImage;
-        }
-    }]
-                    
+-(void)setUser:(PFUser *)user {
+    
+    PFFile *file = user[@"imageFile"];
+    if (file) {
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            UIImage *image = [UIImage imageWithData:data];
+            self.profileImage.image = image;
+        }];
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

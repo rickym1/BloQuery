@@ -9,8 +9,10 @@
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *profileTextField;
+@property (nonatomic, strong) UIImage *imgToUpload;
+@property (weak, nonatomic) IBOutlet UIImageView *viewImage;
 
 @end
 
@@ -41,7 +43,15 @@
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
     imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imgPicker.delegate = self;
-    [self.navigationController presentModalViewController:imgPicker animated:YES];
+    [self presentViewController:imgPicker animated:YES completion:nil];
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    self.viewImage.image = image;
+    self.imgToUpload = image;
     
 }
 
@@ -57,18 +67,33 @@
         [user saveInBackground];
     }
     
-    if (myimage == nil) {
+    if (self.imgToUpload == nil) {
         //nothing
     } else {
-        NSData *data = UIImagePNGRepresentation(chicken.png, 0.5f);
+        NSData *data = UIImageJPEGRepresentation(self.imgToUpload, 0.3);
         PFFile *imageFile = [PFFile fileWithName:@"img" data:data];
-        [imageFile saveInBackground];
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if (succeeded) {
+                NSLog(@"image uploaded");
+                PFUser *user = [PFUser currentUser];
+                [user setObject:imageFile forKey:@"imageFile"];
+                [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+                    if (succeeded) {
+                        NSLog(@"saved to imageFile");
+                    } else {
+                        NSLog(@"not saved to imageFile");
+                    }
+                }];
+            } else {
+                NSLog(@"image upload didn't work");
+            }
+        }];
         
-        PFUser *user = [PFUser currentUser];
-        [user setObject:imageFile forKey:@"imageFile"];
-        [self.navigationController popViewControllerAnimated:YES];
+        
+        
+        
     }
-    
+    [self.navigationController popViewControllerAnimated:YES];
     
     
     

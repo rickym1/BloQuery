@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="5hq-aD-iES" customClass="QATableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="5hq-aD-iES" customClass="QATableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hq-aD-iES" id="eYD-GT-W9D">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -241,6 +241,9 @@
                                     <action selector="getImage:" destination="scz-DV-8nI" eventType="touchUpInside" id="QpL-Tc-5e4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hi2-AH-XPh">
+                                <rect key="frame" x="174" y="408" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -266,7 +269,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="profileDescription" destination="Pt7-GA-2XZ" id="0Dn-Jk-5cU"/>
+                        <outlet property="profileTextField" destination="Pt7-GA-2XZ" id="N3m-5Y-rtV"/>
+                        <outlet property="viewImage" destination="Hi2-AH-XPh" id="e4W-WK-JSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CT1-44-EwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
