@@ -30,6 +30,7 @@
 		DD213FAA1B694F8D0095B175 /* QATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FA91B694F8D0095B175 /* QATableViewController.m */; };
 		DD213FAD1B6968AB0095B175 /* QATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FAC1B6968AB0095B175 /* QATableViewCell.m */; };
 		DD213FB01B6AC1CC0095B175 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */; };
+		DD213FBC1B7004BB0095B175 /* StaticProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD213FBB1B7004BB0095B175 /* StaticProfileViewController.m */; };
 		DD2799A91B65D1AC00F5891E /* AddAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */; };
 		DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299701B6132A300D1B49B /* LoginViewController.m */; };
 		DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299731B6132C100D1B49B /* SignUpViewController.m */; };
@@ -84,6 +85,8 @@
 		DD213FAC1B6968AB0095B175 /* QATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QATableViewCell.m; path = ../QATableViewCell.m; sourceTree = "<group>"; };
 		DD213FAE1B6AC1CC0095B175 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		DD213FBA1B7004BB0095B175 /* StaticProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticProfileViewController.h; path = ../StaticProfileViewController.h; sourceTree = "<group>"; };
+		DD213FBB1B7004BB0095B175 /* StaticProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StaticProfileViewController.m; path = ../StaticProfileViewController.m; sourceTree = "<group>"; };
 		DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnswerViewController.h; sourceTree = "<group>"; };
 		DD2799A81B65D1AC00F5891E /* AddAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnswerViewController.m; sourceTree = "<group>"; };
 		DDA2996F1B6132A300D1B49B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
 				DDA2997C1B61DB1300D1B49B /* QueryTableViewCell.m */,
+				DD213FBA1B7004BB0095B175 /* StaticProfileViewController.h */,
+				DD213FBB1B7004BB0095B175 /* StaticProfileViewController.m */,
 				DD213FAE1B6AC1CC0095B175 /* ProfileViewController.h */,
 				DD213FAF1B6AC1CC0095B175 /* ProfileViewController.m */,
 				DD2799A71B65D1AC00F5891E /* AddAnswerViewController.h */,
@@ -175,6 +180,7 @@
 				DD213FA91B694F8D0095B175 /* QATableViewController.m */,
 				DD213FAB1B6968AB0095B175 /* QATableViewCell.h */,
 				DD213FAC1B6968AB0095B175 /* QATableViewCell.m */,
+				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DDA299811B6281A500D1B49B /* CreateQuestionViewController.h */,
 				DDA299821B6281A500D1B49B /* CreateQuestionViewController.m */,
 				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,
@@ -183,7 +189,6 @@
 				DDA299731B6132C100D1B49B /* SignUpViewController.m */,
 				DD12EBED1B5E134500B4A233 /* AppDelegate.h */,
 				DD12EBEE1B5E134500B4A233 /* AppDelegate.m */,
-				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DD12EBF61B5E134500B4A233 /* Images.xcassets */,
 				DD12EBF81B5E134500B4A233 /* LaunchScreen.xib */,
 				DD213FB11B6ADADC0095B175 /* Images */,
@@ -385,6 +390,7 @@
 			files = (
 				DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */,
 				DD12EBF21B5E134500B4A233 /* ViewController.m in Sources */,
+				DD213FBC1B7004BB0095B175 /* StaticProfileViewController.m in Sources */,
 				DDA299741B6132C100D1B49B /* SignUpViewController.m in Sources */,
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,

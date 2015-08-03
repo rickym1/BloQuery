@@ -14,6 +14,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *userProfileLabel;
 
 
 @end
@@ -26,13 +27,19 @@
 
 -(void)setUser:(PFUser *)user {
     
+    user = self.cellUser;
+    
+    
     PFFile *file = user[@"imageFile"];
     if (file) {
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             UIImage *image = [UIImage imageWithData:data];
             self.profileImage.image = image;
+            NSLog(@"image found");
         }];
     }
+    
+    self.userProfileLabel.text = user[@"username"];
     
 }
 

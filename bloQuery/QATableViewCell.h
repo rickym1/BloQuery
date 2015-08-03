@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "QATableViewController.h"
 
 @interface QATableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLable;
+@property (strong, nonatomic) PFUser *cellUser;
+
 
 -(void)setUser:(PFUser *)user;
 

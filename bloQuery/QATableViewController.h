@@ -12,5 +12,7 @@
 @interface QATableViewController : UITableViewController
 
 @property (nonatomic, strong) PFObject *query;
+@property (nonatomic, strong) PFUser *extraUser;
+
 
 @end

@@ -9,6 +9,7 @@
 #import "QATableViewController.h"
 #import "AddAnswerViewController.h"
 #import "QATableViewCell.h"
+#import "StaticProfileViewController.h"
 
 @interface QATableViewController ()
 
@@ -80,13 +81,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    QATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    QATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QATableViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
     if (indexPath.row == 0) {
         cell.infoLable.text = [self.query objectForKey:@"questionText"];
         [cell setUser:self.query[@"author"]];
+        PFQuery *query = [PFUser query];
+        PFUser *userForCell = (PFUser *)[query getObjectWithId:self.query[@"author"]];
+        self.extraUser = userForCell;
+        
+        
+        
+        
     } else {
         PFObject *finalAnswer = [self.theAnswers objectAtIndex:indexPath.row -1];
         cell.infoLable.text = [finalAnswer objectForKey:@"answerText"];
@@ -103,6 +111,10 @@
     if ([segue.identifier isEqualToString:@"addAnswer"]) {
         AddAnswerViewController *addAnswer = (AddAnswerViewController *)segue.destinationViewController;
         addAnswer.query = self.query;
+    }
+    if ([segue.identifier isEqualToString:@"showStaticProfile"]) {
+        StaticProfileViewController *addUser = (StaticProfileViewController *)segue.destinationViewController;
+        addUser.carriedUser = self.extraUser;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
