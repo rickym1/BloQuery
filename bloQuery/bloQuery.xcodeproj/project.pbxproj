@@ -166,6 +166,7 @@
 		DD12EBE81B5E134500B4A233 /* bloQuery */ = {
 			isa = PBXGroup;
 			children = (
+				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
@@ -180,7 +181,6 @@
 				DD213FA91B694F8D0095B175 /* QATableViewController.m */,
 				DD213FAB1B6968AB0095B175 /* QATableViewCell.h */,
 				DD213FAC1B6968AB0095B175 /* QATableViewCell.m */,
-				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
 				DDA299811B6281A500D1B49B /* CreateQuestionViewController.h */,
 				DDA299821B6281A500D1B49B /* CreateQuestionViewController.m */,
 				DDA2996F1B6132A300D1B49B /* LoginViewController.h */,

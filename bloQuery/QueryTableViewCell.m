@@ -11,10 +11,6 @@
 
 @interface QueryTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *numberOfComments;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @end
 

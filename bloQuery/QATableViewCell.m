@@ -27,8 +27,7 @@
 
 -(void)setUser:(PFUser *)user {
     
-    user = self.cellUser;
-    
+       
     
     PFFile *file = user[@"imageFile"];
     if (file) {

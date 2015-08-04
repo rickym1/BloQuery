@@ -43,6 +43,7 @@
     
     PFRelation *relation = [self.query relationForKey:@"answers"];
     PFQuery *findOut = [relation query];
+    [findOut includeKey:@"author"];
     [findOut findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
         if (!error) {
             self.theAnswers = results;
@@ -88,9 +89,8 @@
     if (indexPath.row == 0) {
         cell.infoLable.text = [self.query objectForKey:@"questionText"];
         [cell setUser:self.query[@"author"]];
-        PFQuery *query = [PFUser query];
-        PFUser *userForCell = (PFUser *)[query getObjectWithId:self.query[@"author"]];
-        self.extraUser = userForCell;
+        
+       
         
         
         
@@ -98,7 +98,8 @@
     } else {
         PFObject *finalAnswer = [self.theAnswers objectAtIndex:indexPath.row -1];
         cell.infoLable.text = [finalAnswer objectForKey:@"answerText"];
-    }
+        [cell setUser:finalAnswer[@"author"]];
+           }
     
     return cell;
 }

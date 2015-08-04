@@ -28,7 +28,6 @@
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    [self.tableView registerClass:[QueryTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
 }
 
@@ -47,6 +46,8 @@
     [super viewWillAppear:animated];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Question"];
+    [query includeKey:@"author"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (!error) {
@@ -84,8 +85,10 @@
 
     QueryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    
     PFObject *question = [self.questions objectAtIndex:indexPath.row];
-    cell.textLabel.text = [question objectForKey:@"questionText"];
+    cell.questionLabel.text = [question objectForKey:@"questionText"];
+    cell.numberOfComments.text = [[question objectForKey:@"author"]objectForKey:@"username"];
     
     
     

@@ -65,9 +65,9 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="numberOfComments" destination="eQN-VO-reR" id="XWG-2g-uRV"/>
-                                    <outlet property="profileImage" destination="zf9-BO-VtG" id="dDC-dF-CyD"/>
-                                    <outlet property="questionLabel" destination="TT3-An-ETR" id="a7Q-GY-PNt"/>
+                                    <outlet property="numberOfComments" destination="eQN-VO-reR" id="Mjj-PK-A3k"/>
+                                    <outlet property="profileImage" destination="zf9-BO-VtG" id="CQK-Bs-hZQ"/>
+                                    <outlet property="questionLabel" destination="TT3-An-ETR" id="gry-5e-fw1"/>
                                     <segue destination="gT2-sg-Rb6" kind="show" identifier="showQA" id="fVq-uO-bAI"/>
                                 </connections>
                             </tableViewCell>
