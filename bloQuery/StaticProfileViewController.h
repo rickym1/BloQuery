@@ -11,6 +11,6 @@
 
 @interface StaticProfileViewController : ProfileViewController
 
-@property (nonatomic, strong) PFUser *carriedUser;
+@property (nonatomic, strong) PFUser *user;
 
 @end

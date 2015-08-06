@@ -28,11 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setUser:(PFUser *)user {
+-(void)viewWillAppear:(BOOL)animated {
     
-    user = self.carriedUser;
+   
 
-    PFFile *file = user[@"imageFile"];
+    PFFile *file = self.user[@"imageFile"];
     if (file) {
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             UIImage *image = [UIImage imageWithData:data];
@@ -41,8 +41,8 @@
         }];
     }
     
-    self.profileNameLabel.text = user[@"username"];
-    self.profileDescriptionLabel.text = user[@"username"];
+    self.profileNameLabel.text = self.user[@"username"];
+    self.profileDescriptionLabel.text = self.user[@"descriptionText"];
     
 }
 

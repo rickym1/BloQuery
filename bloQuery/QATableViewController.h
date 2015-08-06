@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "QATableViewCell.h"
 
-@interface QATableViewController : UITableViewController
+@interface QATableViewController : UITableViewController <MoveToStaticDelegate>
 
 @property (nonatomic, strong) PFObject *query;
 @property (nonatomic, strong) PFUser *extraUser;

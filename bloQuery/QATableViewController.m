@@ -84,6 +84,8 @@
     
     QATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QATableViewCell" forIndexPath:indexPath];
     
+    cell.delegate = self;
+    
     // Configure the cell...
     
     if (indexPath.row == 0) {
@@ -100,6 +102,13 @@
     return cell;
 }
 
+-(void)cell:(QATableViewCell *)cell didSelectProfile:(PFUser *)user {
+    
+    self.extraUser = user;
+    [self performSegueWithIdentifier:@"showStaticProfile" sender:self];
+    
+}
+
 
 #pragma mark - Navigation
 
@@ -111,7 +120,7 @@
     }
     if ([segue.identifier isEqualToString:@"showStaticProfile"]) {
         StaticProfileViewController *addUser = (StaticProfileViewController *)segue.destinationViewController;
-        addUser.carriedUser = self.extraUser;
+        addUser.user = self.extraUser;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

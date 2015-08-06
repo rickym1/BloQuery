@@ -126,15 +126,6 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-qm-Lza">
-                                            <rect key="frame" x="526.5" y="8" width="65" height="51.5"/>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="mqb-XC-sfN" kind="show" identifier="showStaticProfile" id="iaf-Ts-iyt"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="WUJ-xi-pLK" firstAttribute="centerX" secondItem="Qq3-Q6-zJx" secondAttribute="centerX" constant="-0.5" id="4Ti-Tg-L5G"/>
@@ -144,15 +135,9 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="WUJ-xi-pLK" secondAttribute="bottom" id="ElL-4t-MM0"/>
                                         <constraint firstItem="fsB-Gp-jMC" firstAttribute="top" secondItem="eYD-GT-W9D" secondAttribute="topMargin" constant="10" id="GLb-Sq-prQ"/>
                                         <constraint firstItem="WUJ-xi-pLK" firstAttribute="width" secondItem="Qq3-Q6-zJx" secondAttribute="width" id="HgQ-df-evX"/>
-                                        <constraint firstItem="SaV-qm-Lza" firstAttribute="top" secondItem="eYD-GT-W9D" secondAttribute="topMargin" id="I8H-kz-w9l"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="fsB-Gp-jMC" secondAttribute="bottom" constant="10" id="Ij9-cb-ZOh"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="SaV-qm-Lza" secondAttribute="trailing" id="Ixx-jw-x8F"/>
                                         <constraint firstItem="Qq3-Q6-zJx" firstAttribute="top" secondItem="eYD-GT-W9D" secondAttribute="topMargin" id="MiB-Ln-xXg"/>
-                                        <constraint firstItem="SaV-qm-Lza" firstAttribute="width" secondItem="Qq3-Q6-zJx" secondAttribute="width" id="PxS-Qp-x9e"/>
-                                        <constraint firstItem="SaV-qm-Lza" firstAttribute="centerX" secondItem="Qq3-Q6-zJx" secondAttribute="centerX" constant="-0.5" id="Wio-ay-HVf"/>
-                                        <constraint firstItem="SaV-qm-Lza" firstAttribute="leading" secondItem="fsB-Gp-jMC" secondAttribute="trailing" constant="60" id="XUU-Sj-K4c"/>
                                         <constraint firstItem="WUJ-xi-pLK" firstAttribute="top" secondItem="Qq3-Q6-zJx" secondAttribute="bottom" constant="2" id="hex-CS-Phu"/>
-                                        <constraint firstItem="SaV-qm-Lza" firstAttribute="height" secondItem="Qq3-Q6-zJx" secondAttribute="height" id="hjQ-dh-45e"/>
                                         <constraint firstItem="fsB-Gp-jMC" firstAttribute="leading" secondItem="eYD-GT-W9D" secondAttribute="leadingMargin" constant="10" id="j4x-jX-xBO"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="fsB-Gp-jMC" secondAttribute="trailing" constant="125" id="qwR-Dj-wzf"/>
                                     </constraints>
@@ -176,6 +161,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="mqb-XC-sfN" kind="show" identifier="showStaticProfile" id="86y-v1-DM9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEq-Lw-B7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,8 +199,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-CD-cBc">
-                                <rect key="frame" x="180" y="236" width="240" height="164"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-CD-cBc">
+                                <rect key="frame" x="16" y="236" width="568" height="164"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="164" id="D4g-C6-8j9"/>
                                 </constraints>
@@ -221,20 +209,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dKn-CD-cBc" secondAttribute="trailing" constant="164" id="46c-Re-PVv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKn-CD-cBc" secondAttribute="trailing" id="OqR-Mq-Bjo"/>
                             <constraint firstItem="dKn-CD-cBc" firstAttribute="top" secondItem="Lb7-CP-Cf7" secondAttribute="bottom" constant="49" id="Q71-0M-QU3"/>
                             <constraint firstItem="Lb7-CP-Cf7" firstAttribute="leading" secondItem="Wbd-fT-hF6" secondAttribute="leadingMargin" constant="2" id="ZGb-yy-1a2"/>
                             <constraint firstItem="dKn-CD-cBc" firstAttribute="leading" secondItem="Wbd-fT-hF6" secondAttribute="leadingMargin" constant="164" id="acK-Rm-LqS"/>
                             <constraint firstItem="kpl-U5-eGq" firstAttribute="leading" secondItem="Wbd-fT-hF6" secondAttribute="leadingMargin" constant="2" id="f6m-vv-Cq0"/>
+                            <constraint firstItem="dKn-CD-cBc" firstAttribute="leading" secondItem="Wbd-fT-hF6" secondAttribute="leadingMargin" id="pdE-Ud-1BB"/>
                             <constraint firstItem="Lb7-CP-Cf7" firstAttribute="top" secondItem="kpl-U5-eGq" secondAttribute="bottom" constant="32" id="tRK-ga-TRR"/>
                             <constraint firstItem="kpl-U5-eGq" firstAttribute="top" secondItem="rm3-mT-I0P" secondAttribute="bottom" constant="10" id="tYe-oq-Ptt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lb7-CP-Cf7" secondAttribute="trailing" constant="2" id="tol-Qx-aBM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kpl-U5-eGq" secondAttribute="trailing" constant="2" id="xbF-mc-6Rd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="46c-Re-PVv"/>
+                                <exclude reference="acK-Rm-LqS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ibX-9v-w1d"/>
                     <connections>
                         <outlet property="profileDescriptionLabel" destination="Lb7-CP-Cf7" id="QPs-x9-WH1"/>
-                        <outlet property="profileImage" destination="dKn-CD-cBc" id="P0q-ou-4wA"/>
                         <outlet property="profileImageView" destination="dKn-CD-cBc" id="pAr-3Y-jnM"/>
                         <outlet property="profileNameLabel" destination="kpl-U5-eGq" id="rm5-Pi-kLH"/>
                     </connections>

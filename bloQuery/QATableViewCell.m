@@ -51,7 +51,7 @@
 -(void)onTapImageView:(UITapGestureRecognizer *)recognizer {
     
     if ([self.delegate respondsToSelector:@selector(cell:didSelectProfile:)]) {
-        [self.delegate cell:self didSelectProfile:@"showStaticProfile"];
+        [self.delegate cell:self didSelectProfile:self.cellUser];
     }
     
 }

@@ -8,17 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "QATableViewController.h"
 
 
-@protocol MoveToStaticDelegate <NSObject>;
+@class QATableViewCell;
+
+@protocol MoveToStaticDelegate <NSObject>
 
 @optional
--(void)cell:(MoveToStaticDelegate *)static didSelectProfile:(NSString *)view;
+-(void)cell:(QATableViewCell *)cell didSelectProfile:(PFUser *)user;
 
 @end
 
-@interface QATableViewCell : UITableViewCell <UIGestureRecognizerDelegate, MoveToStaticDelegate>
+@interface QATableViewCell : UITableViewCell <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) id <MoveToStaticDelegate> delegate;
 
