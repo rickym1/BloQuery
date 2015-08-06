@@ -90,10 +90,6 @@
         cell.infoLable.text = [self.query objectForKey:@"questionText"];
         [cell setUser:self.query[@"author"]];
         
-       
-        
-        
-        
         
     } else {
         PFObject *finalAnswer = [self.theAnswers objectAtIndex:indexPath.row -1];
