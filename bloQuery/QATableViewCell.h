@@ -26,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *infoLable;
 @property (strong, nonatomic) PFUser *cellUser;
 
+@property (weak, nonatomic) IBOutlet UILabel *numberLikesLabel;
+
+
 
 -(void)setUser:(PFUser *)user;
 

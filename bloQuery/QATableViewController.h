@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) PFObject *query;
 @property (nonatomic, strong) PFUser *extraUser;
+@property (nonatomic, strong) PFObject *anotherAnswer;
 
 
 @end

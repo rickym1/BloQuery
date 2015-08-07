@@ -38,6 +38,7 @@
 		DDA299831B6281A500D1B49B /* CreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA299821B6281A500D1B49B /* CreateQuestionViewController.m */; };
 		DDD253CA1B6045CC007A4BE8 /* InBoxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */; };
 		DDD253CC1B604875007A4BE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD253CB1B604875007A4BE8 /* CoreData.framework */; };
+		DDD89A6C1B7417CD003610C2 /* ViewAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD89A6B1B7417CD003610C2 /* ViewAnswerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBoxTableViewController.h; path = ../InBoxTableViewController.h; sourceTree = "<group>"; };
 		DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InBoxTableViewController.m; path = ../InBoxTableViewController.m; sourceTree = "<group>"; };
 		DDD253CB1B604875007A4BE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DDD89A6A1B7417CD003610C2 /* ViewAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewAnswerViewController.h; path = ../ViewAnswerViewController.h; sourceTree = "<group>"; };
+		DDD89A6B1B7417CD003610C2 /* ViewAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewAnswerViewController.m; path = ../ViewAnswerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				DD12EBF31B5E134500B4A233 /* Main.storyboard */,
+				DDD89A6A1B7417CD003610C2 /* ViewAnswerViewController.h */,
+				DDD89A6B1B7417CD003610C2 /* ViewAnswerViewController.m */,
 				DDD253C81B6045CC007A4BE8 /* InBoxTableViewController.h */,
 				DDD253C91B6045CC007A4BE8 /* InBoxTableViewController.m */,
 				DDA2997B1B61DB1300D1B49B /* QueryTableViewCell.h */,
@@ -395,6 +400,7 @@
 				DD12EBEF1B5E134500B4A233 /* AppDelegate.m in Sources */,
 				DD12EBEC1B5E134500B4A233 /* main.m in Sources */,
 				DD2799A91B65D1AC00F5891E /* AddAnswerViewController.m in Sources */,
+				DDD89A6C1B7417CD003610C2 /* ViewAnswerViewController.m in Sources */,
 				DDA299711B6132A300D1B49B /* LoginViewController.m in Sources */,
 				DDA299831B6281A500D1B49B /* CreateQuestionViewController.m in Sources */,
 				DD213FAD1B6968AB0095B175 /* QATableViewCell.m in Sources */,

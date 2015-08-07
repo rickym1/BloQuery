@@ -44,7 +44,6 @@
     [self.profileImage addGestureRecognizer:recognizer];
     
     self.cellUser = user;
-
     
 }
 

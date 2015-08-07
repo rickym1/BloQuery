@@ -10,6 +10,7 @@
 #import "AddAnswerViewController.h"
 #import "QATableViewCell.h"
 #import "StaticProfileViewController.h"
+#import "ViewAnswerViewController.h"
 
 @interface QATableViewController ()
 
@@ -44,6 +45,8 @@
     PFRelation *relation = [self.query relationForKey:@"answers"];
     PFQuery *findOut = [relation query];
     [findOut includeKey:@"author"];
+    [findOut orderByDescending:@"likeCount"];
+
     [findOut findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
         if (!error) {
             self.theAnswers = results;
@@ -96,7 +99,9 @@
     } else {
         PFObject *finalAnswer = [self.theAnswers objectAtIndex:indexPath.row -1];
         cell.infoLable.text = [finalAnswer objectForKey:@"answerText"];
+        cell.numberLikesLabel.text = [[finalAnswer objectForKey:@"likeCount"] stringValue];
         [cell setUser:finalAnswer[@"author"]];
+        self.anotherAnswer = finalAnswer;
            }
     
     return cell;
@@ -121,6 +126,10 @@
     if ([segue.identifier isEqualToString:@"showStaticProfile"]) {
         StaticProfileViewController *addUser = (StaticProfileViewController *)segue.destinationViewController;
         addUser.user = self.extraUser;
+    }
+    if ([segue.identifier isEqualToString:@"viewAnswer"]) {
+        ViewAnswerViewController *zoomAnswer = (ViewAnswerViewController *)segue.destinationViewController;
+        zoomAnswer.answer = self.anotherAnswer;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
